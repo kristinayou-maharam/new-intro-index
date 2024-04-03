@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "maharam";
+  src: url("./fonts/MaharamNeue-Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "maharam-italic";
+  src: url("./fonts/MaharamNeue-Italic.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "maharam-medium";
+  src: url("./fonts/MaharamNeue-Medium.otf");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "maharam-medium-italic";
+  src: url("./fonts/MaharamNeue-MediumItalic.otf");
+  font-weight: medium;
+}
+
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  overflow-y: visible;
+  position: relative;
+  height: unset;
+  font-family: "maharam", sans-serif;
+}
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#container-inner {
+  background: rgb(136, 136, 136);
+  height: 100vh;
+  width: 160vw;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: unset !important;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+section {
+  min-width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#expand {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 78vh;
+  left: 5vw;
+}
+
+h3:hover {
+  color: red;
+}
+
+#topnav{
+  display: block;
+  position: fixed;
+z-index: 10;
+}
+
+#index{
+  margin-left: 40px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #ffffff;
+  font-family: "maharam";
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h4{
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "maharam";
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+
+
+#logolockup{
+  display: inline-block;
+  margin-left: 5vw;
+  margin-top: 7vh;
+  position: fixed;
+}
+
+#logo{
+  width: 125px;
+}
+
+#rightnav{
+  width: 25vw;
+  display: flex;
+  position: fixed;
+  justify-content: right;
+  top: 5vh;
+  right: 80px;
+  color: white;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+#one{
+  background-image: url(./img/MHRM_JacobHashimoto_Product_01.jpg);
+  background-position: center;
+  background-size: 100vw;
+}
+
+#two{
+  background-image: url(./img/isa_IMG_0031_1.jpg);
+  background-position: center;
+  background-size: 100vw;
+}
+
+#three{
+  background-image: url(./img/factor_0027.jpg);
+  background-position: center;
+  background-size: 100vw;
+}
+
+#four{
+  background-image: url(./img/passage.jpg);
+  background-position: center;
+  background-size: 100vw;
+}
+
+#five{
+  background-image: url(./img/cumulus-hive.jpg);
+  background-position: center;
+  background-size: 100vw;
+}
+
+#six{
+  background-image: url(./img/canopy.jpg);
+  background-position: center;
+  background-size: 100vw;
+}
+
+#seven{
+  background-image: url(./img/twist.jpg);
+  background-position: center;
+  background-size: 100vw;
+  
+}
+
+#seemore{
+  background-color: black;
+  background-position: center;
+  background-size: 100vw;
+  width: 15vw !important;
+}
+
+#seemore:hover{
+  width: 25vw;
+  transition: 1s ease-in-out;
+}
+
+
+#more{
+  color: white;
+  left: 75px;
+  top: 78vh;
+  position: absolute;
+}
+
+#more:hover{
+  color: red;
+}
+
+
+#links{
+  display: none;
+}

@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "maharam";
+  src: url("./fonts/MaharamNeue-Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "maharam-italic";
+  src: url("./fonts/MaharamNeue-Italic.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "maharam-medium";
+  src: url("./fonts/MaharamNeue-Medium.otf");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "maharam-medium-italic";
+  src: url("./fonts/MaharamNeue-MediumItalic.otf");
+  font-weight: medium;
+}
+
+  
+  body{
+    margin-bottom: 15vh;
+  }
+  
+  #logo{
+      width: 125px;
+      margin-left: 0vw;
+  }
+  
+  #logolockup{
+    display: inline-block;
+    margin-left: 5vw;
+    margin-top: -15vh;
+    position: fixed;
+  }
+
+  #topnav{
+    display: block;
+    position: fixed;
+  z-index: 10;
+  margin-top: -20px;
+  }
+  
+  
+  p {
+      font-size: 16px;
+      color: #000000;
+      font-family: "maharam";
+      font-weight: normal;
+      vertical-align: top;
+      line-height: 1.4;
+    }
+    
+    h1 {
+      font-size: 48px;
+      color: #000000;
+      font-family: "maharam";
+      font-weight: normal;
+      margin-bottom: 50px;
+      vertical-align: top;
+    }
+    
+    h2 {
+      font-size: 30px;
+      color: #000000;
+      font-family: "maharam";
+      font-weight: normal;
+      vertical-align: top;
+      margin-top: 20px;
+    }
+    
+    h3 {
+      font-size: 18px;
+      color: #000000;
+      font-family: "maharam";
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+    h4{
+      font-size: 18px;
+      color: #ffffff;
+      font-family: "maharam";
+      font-weight: normal;
+    }
+  
+    a{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+  
+    a:hover{
+      color: red;
+    }
+  
+    #rightnav{
+      width: 25vw;
+      display: flex;
+     position: fixed;
+     justify-content: right;
+     top: 3.5vh;
+     right: 80px;
+     z-index: 10;
+    }
+  
+    #home{
+      display: inline;
+      }
+  
+    #index{
+      display: inline;
+      margin-left: 40px;
+    }
+  
+    #smallpreview{
+      width: 25vw;
+      transform: .2s;
+      transition: all 0.8s;
+      height: 35vh;
+      background-size: 100% 100%;
+  
+    }
+  
+    #smallpreview:hover{
+      background-size: 105% 105%;
+    }
+  
+    #grid-item{
+      display: inline-block;
+      margin-right: 2vw;
+      margin-left: 2vw;
+      margin-bottom: 30px;
+    }
+  
+    #grid{
+      position: relative;
+      margin-top: 24vh;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      display: block;
+    }
+  
+    #row{
+      margin-bottom: 50px;
+    }
+  
+    #productlink{
+      line-height: 0.8;
+    }
+  
+  
+    #sort{
+      display: block;
+      position: absolute;
+      right: 12.5vw;
+      top: 16vh;
+    }
+  
+    #top{
+      background-color: white;
+      z-index: 1000;
+    }
+
+    .number{
+      display: none;
+    }
+
+    .arrows{
+      border: 0px;
+      background-color: white;
+    }
+
+    .is-active{
+      color: red;
+    }

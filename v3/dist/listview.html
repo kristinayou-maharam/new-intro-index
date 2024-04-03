@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharam Introduction Page Index</title>
+    <link rel="stylesheet" href="liststyles.css">
+</head>
+<body>
+    <div id="topnav">
+        <div id="logolockup">
+          <img id="logo" src="img/smalluselogo.svg">
+          <h4 style="margin-top: 15px; color: black;">Introductions</h4>
+          </div>
+          <div id="rightnav">
+            <h4 id="home"><a style="text-decoration: none;" href="https://maharam.com">Maharam Home</a></h4>
+            <h4 id="index"><a href="./index.html">Gallery View</a></h4>
+        </div>
+          </div>
+        <div id="sortby">
+        <p id="sort" style="display: inline-block;">Sort By:</p>
+        <button class="arrows" id="newtoold" style="display: inline-block; position: absolute; right: 10vw; top: 16vh;color: rgb(0, 0, 0)"><p >↑</p></button>
+        <button class="arrows" id="oldtonew" style="display: inline-block; position: absolute; right: 8vw; top: 16vh;color: rgb(0, 0, 0)"><p >↓</p></button>
+            </div>
+
+    <div id="grid">
+            <div id="grid-item">
+                <div id="smallpreview" style="background-image: url(./img/MHRM_JacobHashimoto_small.jpg);"></div>
+                <p class="number">1</p>
+                <h3>February 2024</h3>
+                <p id="productlink"><a href="https://introductions.maharam.com/february_2024/"> Presentation→</a></p>
+            <p id="productlink"><a href="https://www.maharam.com/products">Products→</a></p>
+            </div>
+            <div id="grid-item">
+                <div id="smallpreview" style="background-image: url(./img/isa_small.jpg);"></div>
+                <p class="number">2</p>
+                <h3>November 2023</h3>
+                <p id="productlink"><a href="https://introductions.maharam.com/november_2023/"> Presentation→</a></p>
+            <p id="productlink"><a href="https://www.maharam.com/products">Products→</a></p>
+            </div>
+            <div id="grid-item">
+                <div id="smallpreview" style= "background-image: url(./img/factor_small.jpg)"></div>
+                <p class="number">3</p>
+                <h3>September 2023</h3>
+                <p id="productlink"><a href="https://introductions.maharam.com/september_2023/"> Presentation→</a></p>
+            <p id="productlink"><a href="https://www.maharam.com/products">Products→</a></p>
+            </div>
+
+            <div id="grid-item">
+                <div id="smallpreview" style="background-image: url(./img/passage-small.jpg);"></div>
+                <p class="number">4</p>
+                <h3>June 2023</h3>
+                <p id="productlink"><a href="https://introductions.maharam.com/june_2023/"> Presentation→</a></p>
+            <p id="productlink"><a href="https://www.maharam.com/products">Products→</a></p>
+            </div>
+            <div id="grid-item">
+                <div id="smallpreview" style="background-image: url(./img/cumulus-hive-small.jpg);"></div>
+                <p class="number">5</p>
+                <h3>April 2023</h3>
+                <p id="productlink"><a href="https://introductions.maharam.com/april_2023/"> Presentation→</a></p>
+            <p id="productlink"><a href="https://www.maharam.com/products">Products→</a></p>
+            </div>
+            <div id="grid-item">
+                <div id="smallpreview" style="background-image: url(./img/canopy-small.jpg);"></div>
+                <p class="number">6</p>
+                <h3>February 2023</h3>
+                <p id="productlink"><a href="https://introductions.maharam.com/february_2023/"> Presentation→</a></p>
+            <p id="productlink"><a href="https://www.maharam.com/products">Products→</a></p>
+            </div>
+    
+            <div id="grid-item">
+                    <div id="smallpreview" style="background-image: url(./img/twist-small.jpg)"></div>
+                    <p class="number">7</p>
+                    <h3>November 2022: Bertjan Pot</h3>
+                    <p id="productlink"><a href="https://introductions.maharam.com/november_2022/"> Presentation→</a></p>
+                <p id="productlink"><a href="https://www.maharam.com/products">Products→</a></p>
+                </div>
+
+                <div id="grid-item">
+                    <div id="smallpreview" style="background-image: url(./img/twist-small.jpg)"></div>
+                    <p class="number">8</p>
+                    <h3>20 Years of Paul Smith and Maharam</h3>
+                    <p id="productlink"><a href="https://introductions.maharam.com/november_2022/"> Presentation→</a></p>
+                <p id="productlink"><a href="https://www.maharam.com/products">Products→</a></p>
+                </div>
+                </div>
+    </div>
+    <script src="./isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script>
+            var $grid = $('.grid').isotope({
+                itemSelector: '.grid-item',
+                layoutMode: 'fitRows',
+                getSortData: {
+                    number: '.number parseInt'
+                }
+            });
+
+            $('#newtoold').on('click', function() {
+                console.log("The #newtoold button was clicked.");
+                $('.grid').isotope({ sortBy: 'number', sortAscending: false });
+                $(this).addClass('is-active');
+                $('#oldtonew').removeClass('is-active');
+            });
+
+            $('#oldtonew').on('click', function() {
+                console.log("The #oldtonew button was clicked.");
+                $('.grid').isotope({ sortBy: 'number', sortAscending: true });
+                $(this).addClass('is-active');
+                $('#newtoold').removeClass('is-active');
+            });
+    </script>
+</body>
+</html>
