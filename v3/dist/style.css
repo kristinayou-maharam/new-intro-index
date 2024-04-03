@@ -61,7 +61,7 @@ section {
   cursor: pointer;
   color: white;
   position: absolute;
-  top: 78vh;
+  top: 75vh;
   left: 4vw;
 }
 
@@ -183,7 +183,7 @@ a{
 #more{
   color: white;
   left: 75px;
-  top: 78vh;
+  top: 75vh;
   position: absolute;
 }
 
