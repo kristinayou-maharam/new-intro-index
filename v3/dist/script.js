@@ -1,5 +1,3 @@
-console.clear();
-
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 let containerOuter = document.getElementById("container-outer");
@@ -19,7 +17,7 @@ let tween = gsap.to(sections, {
 });
 
 var expanded = false;
-var expandButton = document.getElementById("expand");
+var expandButton = document.getElementById("month");
 
 expandButton.addEventListener("click", function () {
   gsap.fromTo(
@@ -30,7 +28,7 @@ expandButton.addEventListener("click", function () {
     {
       minWidth: !expanded ? "100vw" : "25vw",
       duration: 0.5,
-      ease: "none",
+      ease: "power1.inOut",
       onComplete: () => {
         expanded = !expanded;
         let st = tween.scrollTrigger,
@@ -42,8 +40,7 @@ expandButton.addEventListener("click", function () {
         // st.scroll(st.start + (st.end - st.start) * progress);
         st.update();
         st.getTween().progress(1); // eliminate the scrub animation
-        let n = 1 / (sections.indexOf(this.target) + 1);
-        console.log(n);
+        let n = 1 / (Array.from(containerInner.children).indexOf(containerOuter.parentElement) + 1);
         gsap.to(window, {
           scrollTo: {
             y: st.start + (st.end - st.start) * (expanded ? n : progress)

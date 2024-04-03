@@ -23,7 +23,7 @@
   <div id="container-inner">
     <section class="mainimage" id="one">
       <div id="expand">
-        <h3 id="month" onclick="showLinks()">
+        <h3 id="month">
         February 2024
         </h3>
         <div id="links">
@@ -34,7 +34,7 @@
     </section>
     <section class="mainimage" id="two">
       <div id="expand">
-        <h3 id="month" onclick="showLinks()">
+        <h3 id="month">
         November 2023
         </h3>
         <div id="links">
@@ -45,7 +45,7 @@
     </section>
     <section class="mainimage" id="three">
       <div id="expand">
-        <h3 id="month" onclick="showLinks()">
+        <h3 id="month">
         September 2023
         </h3>
         <div id="links">
@@ -56,7 +56,7 @@
     </section>
     <section class="mainimage" id="four">
       <div id="expand">
-        <h3 id="month" onclick="showLinks()">
+        <h3 id="month">
         June 2023
         </h3>
         <div id="links">
@@ -67,7 +67,7 @@
     </section>
     <section class="mainimage" id="five">
       <div id="expand">
-        <h3 id="month" onclick="showLinks()">
+        <h3 id="month">
         April 2023
         </h3>
         <div id="links">
@@ -78,7 +78,7 @@
     </section>
     <section class="mainimage" id="six">
       <div id="expand">
-        <h3 id="month" onclick="showLinks()">
+        <h3 id="month">
         February 2023
         </h3>
         <div id="links">
@@ -89,7 +89,7 @@
     </section>
     <section class="mainimage" id="seven">
       <div id="expand">
-        <h3 id="month" onclick="showLinks()">
+        <h3 id="month">
         November 2022:<br>Bertjan Pot
         </h3>
         <div id="links">
@@ -99,7 +99,7 @@
       </div>
     </section>
     <section id="seemore">
-    <h3 id="more">See More →</h3>
+    <h3 id="more"><a href="./listview.html">See More →</a></h3>
     </section>
   </div>
 </div>
@@ -111,14 +111,16 @@
 
 
 <script>
-  function showLinks() {
-    var links = document.getElementById("links");
-    if (links.style.display === "none") {
-      links.style.display = "block";
-    } else {
-      links.style.display = "none";
-    }
-  }
+  document.querySelectorAll("#container-inner section").forEach(function(section, index) {
+    section.querySelector("#expand").addEventListener("click", function() {
+      var links = section.querySelector("#links");
+      if (links.style.display === "none") {
+        links.style.display = "block";
+      } else {
+        links.style.display = "none";
+      }
+    });
+  });
 </script>
 
 </body>
